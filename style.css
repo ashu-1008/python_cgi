@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgba(0, 238, 255, 0.952);
+    width: 700px;
+    height: 300px;
+    border: 3px solid darkblue;
+}
+
+.slider-1-body,.slider-2-body {
+    position: relative;
+    width: 670px;
+    height: 100px;
+    margin: auto;
+    margin-top: 10px;
+    /* background-color: white; */
+}
+
+/* slider 1 */
+
+.slider-continuous-container, .slider-discrete-container{
+    width: 75%;
+    position: relative;
+    background-color: white;
+    
+    height: 100px;
+    
+    /* margin-left: 100px; */
+}
+
+.slider-continuous,.slider-discrete  {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 20px;
+    background: linear-gradient(90deg, rgb(214,214,214) 60%, rgb(214,214,214) 60%);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: 0.1s;
+    transition: opacity 0.1s;
+    border-radius: 12px;
+    box-shadow: 0px 1px 10px 1px black;
+    margin-left: -20px;
+    /* border: inset; */
+}
+
+.slider-continuous:hover,.slider-discrete:hover {
+    opacity: 1;
+}
+
+.slider-continuous::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: grey;
+    /* box-shadow: 0 0 7px white; */
+    background-image: radial-gradient(circle, rgb(219, 216, 216) 30%, rgba(255, 255, 255, 0.952) 50%);
+    border-radius: 50%;
+    cursor: pointer;
+    /* z-index: 100; */
+    border: 1px solid rgba(185, 185, 185, 0.733);
+}
+
+.slider-continuous::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.slider-continuous::after,.slider-discrete::after {
+    content: "120";
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: bolder;
+    position: absolute;
+    right: 5px;
+    top: -50px;
+}
+
+.slider-continuous::before,.slider-discrete::before  {
+    content: "0";
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: bolder;
+    position: absolute;
+    left: 6.5px;
+    top: -50px;
+}
+
+
+/* input-box-1 */
+.input-box-1, .input-box-2 {
+    position: absolute;
+    top: 35px;
+    width: 100px;
+    right: 5px;
+    height: 50px;
+    background: rgba(35, 35, 250, 0.705);
+    color: white;
+    text-align: center;
+    font-size: larger;
+    border: 3px solid rgba(4, 4, 139, 0.781);
+}
+
+input[type=number]:focus {
+    outline: none;
+    border: 3px solid rgba(4, 4, 139, 0.781);
+}
+
+
+/* to remove scroll */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.slider-discrete::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 29px;
+    border: 0;
+    background: url('test.svg');
+    transform: translateY(25%);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 0;
+    
+  }
+.slider-discrete::-moz-range-thumb {
+    width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('test.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+  }
+
+.slider-discrete {
+    top: 60px;
+    height: 10px;
+}
+
+/* buttons-save-cancel */
+.btn-container {
+    position: relative;
+    width: 670px;
+    height: 50px;
+    margin: auto;
+    margin-top: 10px;
+    /* background-color: white; */
+}
+.btn-save, .btn-cancel {
+    position: absolute;
+    top: 7px;
+    left: 200px;
+    width: 80px;
+    height: 36px;
+    background: rgba(35, 35, 250, 0.705);
+    color: white;
+    text-align: center;
+    font-size: larger;
+    border: 3px solid rgba(4, 4, 139, 0.781);
+    cursor: pointer;
+}
+
+.btn-cancel {
+    left: 350px;
+}
+
+#hover-range {
+    position: absolute;
+    top: 19px;
+    /* display: none; */
+    left: 7px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#hover-range-2 {
+    position: absolute;
+    top: 30px;
+    /* display: none; */
+    left: 5.5px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#scale {
+    position: absolute;
+    top: 85px;
+    left: 8px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 490px;
+    height: 12px;
+    overflow: hidden;
+}

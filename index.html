@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- C:\xampp\htdocs\django-task\main.py -->
+<form action="/django-task/main.py" method="POST">
+    <div class="container">
+        <div class="slider-1-body">
+            <div class="slider-continuous-container">
+                <span id="hover-range">0</span>
+                <input type="range" id="myRange1" class="slider-continuous" value="0" min="0" max="120">
+            </div>
+            <div class="input-container-1">
+                <input type="number" id="input-box-1" class="input-box-1" min="0" max="120" name="range1" value="0">
+            </div>
+        </div>
+        <div class="slider-2-body">
+            <div class="slider-discrete-container">
+                <input type="range" id="myRange2" class="slider-discrete" value="0" min="0" max="120" step="10">
+            </div>
+            <div class="input-container-2">
+                <span id="hover-range-2">0</span>
+                <input type="number" id="input-box-2" class="input-box-2" min="0" max="120" step="10" name="range2" value="0">
+            </div>
+            <div id="scale">
+                <ul>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+                <li>|</li>
+            </ul>
+        </div>
+        </div>
+        <div class="btn-container">
+            <button class="btn-save" type="submit" >Save</button>
+            <button class="btn-cancel"  id="btn-cancel" type="reset">Cancel</button>
+        </div>
+    </div>
+</form>
+    <script src="index.js"></script>
+</body>
+</html>
+
